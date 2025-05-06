@@ -12,11 +12,10 @@
 5. Recommendations
 6. Conclusion
 
-**1. Executive Summary**
+## **1. Executive Summary**
 
 An email appearing to impersonate OpenSea was received and forwarded to the phishing reporting mailbox. Upon inspection, the email originates from a third-party domain (`jfp.events`) and was routed via Amazon SES infrastructure. Although standard authentication checks (SPF, DKIM, DMARC) appear to have passed, the combination of indicators warrants further scrutiny due to the unusual sending domain and structure of the message.
 
----
 
 ## **2. Email Metadata Analysis**
 
@@ -28,7 +27,7 @@ An email appearing to impersonate OpenSea was received and forwarded to the phis
 | **Date** | `Fri, 1 Mar 2024 21:49:55 +0000` |
 | **Message-ID** | `<010e018dfbfec94a-...@ap-southeast-1.amazonses.com>` |
 
-![image.png](attachment:317386a1-851e-445f-9c7b-d5ebc2c563df:image.png)
+<img src = 'Folder/CleanShot 2025-05-05 at 21.14.58@2x.png'>
 
 ### **Suspicious Elements**
 
@@ -59,7 +58,7 @@ An email appearing to impersonate OpenSea was received and forwarded to the phis
     - **DMARC:** "Best Guess Pass" (weak enforcement).
 - **X-SES-Outgoing:** Confirms Amazon SES was used (common in phishing).
 
-![CleanShot 2025-05-06 at 15.56.35.png](attachment:f915d2d9-8cc7-4d44-92c2-600c5e16bca5:CleanShot_2025-05-06_at_15.56.35.png)
+<img src = 'Folder/CleanShot 2025-05-06 at 15.56.35.png'>
 
 ### **B. Embedded Url Analysis**
 
@@ -82,22 +81,24 @@ An email appearing to impersonate OpenSea was received and forwarded to the phis
 
 **Whois**
 
-![image.png](attachment:82c43e82-2ddd-44d3-8964-5ac5067a1573:image.png)
+<img src = 'Folder/who is.png'>
 
 **Symantec**
 
-img src= 'Folder/symantec.png'
+<img src= 'Folder/symantec.png'>
+
 **PhishTank**
 
-![image.png](attachment:bc6a35be-1c0a-43e9-9e72-5f3e0b9485d0:image.png)
+<img src = 'Folder/phish tank.png'>
 
 **URLScan.io**
 
-![image.png](attachment:7075d549-f12f-441b-80b5-68e3c509a586:image.png)
+<img src = 'Folder/url scan.png'> 
 
 **VirusTotal**
 
-![CleanShot 2025-05-06 at 15.16.37.png](attachment:25e92e84-f12e-470e-9df9-f7cb41938463:CleanShot_2025-05-06_at_15.16.37.png)
+<img src = 'Folder/CleanShot 2025-05-06 at 15.16.37.png'>
+
 
 ### **C. IP Reputation Analysis**
 
@@ -107,7 +108,7 @@ img src= 'Folder/symantec.png'
 - **Abuse History:** 12 reports (low confidence of abuse, but SES IPs are often rotated to evade detection).
 - **Recommendation:** Block all emails from **`jfp.events`** and monitor AWS SES traffic for spoofing.
 
-![CleanShot 2025-05-06 at 16.06.15.png](attachment:e601d927-ecc8-46eb-a5cb-105f6811bca1:CleanShot_2025-05-06_at_16.06.15.png)
+<img src ='Folder/CleanShot 2025-05-06 at 16.06.15.png'>
 
 ## **4. Threat Assessment**
 
