@@ -86,8 +86,7 @@ An email appearing to impersonate OpenSea was received and forwarded to the phis
 
 **Symantec**
 
-![image.png](attachment:b42e5428-7e91-4041-9bb8-56e9b5cad820:image.png)
-
+img src= 'Folder/symantec.png'
 **PhishTank**
 
 ![image.png](attachment:bc6a35be-1c0a-43e9-9e72-5f3e0b9485d0:image.png)
